@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px;
+  display: flex; /* Usamos flexbox para centrar el contenido */
+  flex-direction: column; /* Los elementos se apilan verticalmente */
+  justify-content: flex-start; /* El contenido empieza desde la parte superior */
+  align-items: center; /* Centramos el contenido horizontalmente */
+  min-height: 100vh; /* Aseguramos que el cuerpo ocupe toda la altura */
+  margin: 0; /* Elimina los márgenes por defecto */
+}
+
+h1 {
+  color: #00c6ff;
+  margin-bottom: 20px;
+}
+
+select, button {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+select {
+  width: 200px;
+}
+
+button {
+  background-color: #00c6ff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0cebc9;
+}
+
+#resultats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%; /* El contenedor de resultados ocupa todo el ancho */
+}
+
+#resultats div {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin: 10px auto;
+  border-radius: 10px;
+  width: 50%; /* El div de cada resultado ocupa el 50% */
+  text-align: center;
+  min-width: 250px; /* Evita que el div sea demasiado pequeño */
+}
+
+/* Estilos de la imagen fuera de la lista */
+#imagen {
+  margin-top: 40px; /* Separación entre la lista de resultados y la imagen */
+  max-width: 80%;   /* La imagen no ocupará más del 80% del ancho de la página */
+  height: auto;     /* Mantener la proporción original de la imagen */
+  display: block;   /* Asegura que la imagen esté bloqueada y se centre */
+  margin-left: auto; /* Centra la imagen */
+  margin-right: auto; /* Centra la imagen */
+}
