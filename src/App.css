@@ -1,69 +1,129 @@
+/* Estilos generales */
 body {
-  font-family: Arial, sans-serif;
-  background: #ffffff;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 20px;
-  display: flex; /* Usamos flexbox para centrar el contenido */
-  flex-direction: column; /* Los elementos se apilan verticalmente */
-  justify-content: flex-start; /* El contenido empieza desde la parte superior */
-  align-items: center; /* Centramos el contenido horizontalmente */
-  min-height: 100vh; /* Aseguramos que el cuerpo ocupe toda la altura */
-  margin: 0; /* Elimina los márgenes por defecto */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: white;
 }
 
 h1 {
   color: #00c6ff;
   margin-bottom: 20px;
-}
-
-select, button {
-  margin: 10px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-}
-
-select {
-  width: 200px;
-}
-
-button {
-  background-color: #00c6ff;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background-color: #0cebc9;
+  font-size: 2.5rem;
 }
 
 #resultats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-top: 20px;
-  width: 100%; /* El contenedor de resultados ocupa todo el ancho */
+  padding: 20px;
 }
 
-#resultats div {
-  background: rgba(255, 255, 255, 0.1);
+/* Estilo del selector */
+select {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 250px;
+  background-color: #333;
+  border: 1px solid #555;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+select:hover {
+  background-color: #444;
+  border-color: #00c6ff;
+}
+
+option {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Estilo para los resultados */
+.resultado {
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 15px;
   margin: 10px auto;
-  border-radius: 10px;
-  width: 50%; /* El div de cada resultado ocupa el 50% */
-  text-align: center;
-  min-width: 250px; /* Evita que el div sea demasiado pequeño */
+  border-radius: 15px;
+  width: 70%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Estilos de la imagen fuera de la lista */
-#imagen {
-  margin-top: 40px; /* Separación entre la lista de resultados y la imagen */
-  max-width: 80%;   /* La imagen no ocupará más del 80% del ancho de la página */
-  height: auto;     /* Mantener la proporción original de la imagen */
-  display: block;   /* Asegura que la imagen esté bloqueada y se centre */
-  margin-left: auto; /* Centra la imagen */
-  margin-right: auto; /* Centra la imagen */
+.resultado:hover {
+  transform: scale(1.05);
+}
+
+.resultado p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.resultado h3 {
+  color: #00c6ff;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Información de la localidad */
+.localidad-info {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.localidad-info p {
+  margin-bottom: 10px;
+}
+
+.localidad-info strong {
+  color: #00c6ff;
+}
+
+/* Mensaje cuando no hay datos */
+.no-datos {
+  color: #e3e3e3;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Estilo de la cabecera */
+header {
+  background-color: #1f1f1f;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Efectos de transición y hover */
+button {
+  background-color: #00c6ff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #009cbf;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .resultado {
+    width: 90%;
+  }
+
+  select {
+    width: 80%;
+  }
 }
